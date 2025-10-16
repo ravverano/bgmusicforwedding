@@ -1,0 +1,17 @@
+<div id="start-screen" style="position:fixed; inset:0; background:#000; color:#fff; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer;">
+  Tap to Start 🎵
+</div>
+
+<audio id="bg-music" loop>
+  <source src="palagi.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const startScreen = document.getElementById('start-screen');
+const bg = document.getElementById('bg-music');
+
+startScreen.addEventListener('click', () => {
+  bg.play();
+  startScreen.style.display = 'none';
+});
+</script>
